@@ -1,0 +1,45 @@
+@import '../../css/_mixins.scss';
+
+.detailsPageContainer {
+   width: 90%;
+   margin: 0 auto;
+
+   @include responsive(desktop) {
+      width: 80%;
+      display: grid;
+      gap: var(--gap-large) var(--gap-xlarge-plus);
+      grid-template-columns: 1.3fr 0.7fr; 
+      grid-template-rows: 0.3fr 2.1fr 0.6fr; 
+      grid-template-areas: 
+         "detailsInfoWrapper detailsWishlistWrapper"
+         "detailsInfoWrapper detailsFormWrapper"
+         "detailsInfoWrapper .";
+   }
+
+   .detailsInfoWrapper {
+      @include responsive(desktop) {
+         grid-area: detailsInfoWrapper;
+      }
+   }
+
+   .detailsWishlistWrapper {
+      margin: var(--spacing-large) 0;
+
+      @include responsive(desktop) {
+         grid-area: detailsWishlistWrapper;
+         display: flex;
+         align-items: flex-end;
+         justify-content: flex-end;
+      }
+
+      button {
+         margin: 0;
+      }
+   }
+
+   .detailsFormWrapper {
+      @include responsive(desktop) {
+         grid-area: detailsFormWrapper;
+      }
+   }
+}

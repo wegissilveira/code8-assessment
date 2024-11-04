@@ -1,0 +1,25 @@
+.buttonWrapper {
+   padding: var(--spacing-small) var(--spacing-large);
+   border: none;
+   font-weight: var(--font-weight-medium);
+   display: inline-flex;
+   align-items: center;
+   gap: var(--gap-small);
+   cursor: pointer;
+   outline: none;
+   width: fit-content;
+
+   &--primary {
+      background-color: var(--color-blue-light);
+      color: var(--color-white);
+
+      &:hover {
+         background-color: var(--color-blue-light);
+      }
+
+      &:disabled {
+         background-color: var(--color-blue-light);
+         cursor: not-allowed;
+      }
+   }
+}

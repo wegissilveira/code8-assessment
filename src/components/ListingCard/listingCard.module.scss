@@ -1,0 +1,56 @@
+@import '../../css/_mixins.scss';
+
+.listingCardContainer {
+   border: .0625rem solid var(--color-grey);
+   max-width: 18.75rem;
+   max-height: 23.125rem;
+   
+   @include responsive(desktop) {
+      max-width: 17.5rem;
+   }
+
+   img {
+      margin: 0 auto;
+      display: block;
+   }
+
+   .listingCardWrapper {
+      padding: var(--spacing-small);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--gap-xsmall);
+
+      .listingCardTitle {
+         font-size: var(--font-size-md);
+         font-weight: var(--font-weight-medium);
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         width: 100%;
+
+         @include responsive(desktop) {
+            font-size: var(--font-size-xl);
+         }
+      }
+
+      .listingCardDetails {
+         color: var(--color-dark-grey);
+         font-size: var(--font-size-sm);
+
+         @include responsive(desktop) {
+            font-size: var(--font-size-md);
+         }
+      }
+
+      .listingCardPrice {
+         font-size:var(--font-size-xl);
+         font-weight: var(--font-weight-medium);
+         margin-top: var(--spacing-small);
+
+         @include responsive(desktop) {
+            font-size: var(--font-size-2xl);
+         }
+      }
+   }
+}

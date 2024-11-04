@@ -1,0 +1,18 @@
+@import '../../css/_mixins.scss';
+
+.listingDetailsContainer {  
+   img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+   }
+
+   .listingDetailsDescription {
+      color: var(--color-dark-grey);
+      font-size: var(--font-size-xs);
+
+      @include responsive(desktop) {
+         font-size: var(--font-size-md);
+      }
+   }
+}

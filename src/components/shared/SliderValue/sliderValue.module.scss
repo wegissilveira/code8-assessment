@@ -1,0 +1,41 @@
+.sliderValueContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   .sliderValueRangeBar {
+      position: relative;
+      width: 55%;
+      height: .125rem;
+      background-color: var(--color-grey);
+      touch-action: none;
+
+      .sliderValueRangeLimitLeft {
+         position: absolute;         
+         top: -0.25rem;
+         left: 0;
+         width: .125rem;
+         height: .625rem;
+         background-color: var(--color-dark-grey);
+      }
+
+      .sliderValueRangeLimitRight {
+         position: absolute;         
+         top: -0.25rem;
+         right: 0;
+         width: .125rem;
+         height: .625rem;
+         background-color: var(--color-dark-grey);
+      }
+
+      .sliderValueRangeHandler {
+         position: absolute;
+         top: -0.625rem;
+         width: .1875rem;
+         height: 1.25rem;
+         background-color: var(--color-blue-light);
+         transform: translateX(-50%);
+         cursor: pointer;
+      }
+   }
+}

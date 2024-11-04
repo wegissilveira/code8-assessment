@@ -1,0 +1,20 @@
+@import '../../css/_mixins.scss';
+
+.listingGalleryContainer {
+  display: grid;
+  gap: var(--gap-xlarge);
+  grid-template-columns: 1fr;
+
+  @include responsive(tablet) {
+    gap: var(--gap-xlarge) var(--gap-medium);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include responsive(desktop) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include responsive(big-desktop) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

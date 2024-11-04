@@ -1,0 +1,42 @@
+@import '../../css/_mixins.scss';
+
+.ListingFilterContainer {
+   position: relative;
+   margin: var(--spacing-small) 0;
+
+   .ListingFilterSubContainer {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-small);
+      width: 100%;
+      padding: var(--spacing-small);
+      position: absolute;
+      background-color: var(--color-white);
+      border: .0625rem solid var(--color-grey);
+      z-index: 1;
+      margin-top: var(--spacing-small);
+
+      @include responsive(desktop) {
+         position: unset;
+         flex-direction: row;
+         border: none;
+         justify-content: space-between;
+         align-items: center;
+         margin: var(--spacing-large) 0;
+         padding: 0;
+         margin: 0;
+      }
+
+      .ListingFilterPriceSlider {
+         width: 100%;
+
+         @include responsive(desktop) {
+            width: 30%;
+         }
+
+         @include responsive(big-desktop) {
+            width: 20%;
+         }
+      }
+   }
+}

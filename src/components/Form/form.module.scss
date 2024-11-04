@@ -1,0 +1,75 @@
+@import '../../css/_mixins.scss';
+
+.formContainer {
+   padding: var(--spacing-large-plus);
+   background-color: var(--color-grey);
+   height: 100%;
+   box-sizing: border-box;
+   
+   .formHeader {
+      position: relative;
+
+      h2 {
+         margin-bottom: var(--spacing-xlarge-plus);
+         text-align: center;
+      }
+   
+      .formSuccessText {
+         color: var(--color-success);
+         position: absolute;
+         bottom: -1.5625rem;
+         width: 100%;
+         font-size: var(--font-size-lg);
+         text-align: center;
+
+         @include responsive(desktop) {
+            font-size: var(--font-size-xl);
+         }
+      }
+   }
+
+   form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: var(--gap-large-plus);
+
+      .inputWrapper {
+         width: 100%;
+         position: relative;
+
+         &.commentInput {
+            height: 6.25rem;
+         }
+
+         input {
+            padding: var(--spacing-small);
+            border: none;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            position: relative;
+   
+            &::placeholder {
+               text-transform: capitalize;
+               position: absolute;
+               top: .3125rem;
+               left: .3125rem;
+            }
+         }
+
+         .formErrorText {
+            color: var(--color-error);
+            position: absolute;
+            left: 0;
+            bottom: -1.25rem;
+            font-size: var(--font-size-sm);
+
+            @include responsive(desktop) {
+               grid-area: detailsFormWrapper;
+               font-size: var(--font-size-md);
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,10 @@
+@import '../../css/_mixins.scss';
+
+.listingPageContainer {
+   width: 90%;
+   margin: 0 auto;
+
+   @include responsive(desktop) {
+      width: 80%;
+   }
+}

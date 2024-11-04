@@ -1,0 +1,32 @@
+@import '../../../css/_mixins.scss';
+
+.listingDetailsNumbersContainer {
+   display: flex;
+   justify-content: space-between;
+   border: .0625rem solid var(--color-grey);
+   padding: var(--spacing-medium);
+   margin: var(--spacing-medium) 0;
+
+   .listingDetailsNumbersInfos {
+      text-align: center;
+
+      p {
+         font-size: var(--font-size-sm);
+      }
+
+      span {
+         font-size: var(--font-size-xs);
+         color: var(--color-dark-grey);
+      }
+
+      @include responsive(desktop) {
+         p {
+            font-size: var(--font-size-2xl);
+         }
+   
+         span {
+            font-size: var(--font-size-md);
+         }
+      }
+   }
+} 
